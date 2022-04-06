@@ -69,4 +69,19 @@ public class Enemy : MonoBehaviour
        pos = temPos; //position is equal to tempary positon
      }//end Move()
 
+     private void OnCollisionEnter(Collision collision){
+       GameObject otherGo = collision.gameObject;
+
+       if(otherGo.tag == "Projectile Hero"){
+         Debug.Log("yeeeet gottem");
+         Destroy(otherGo);
+         GameManager.GM.UpdateScore(score);
+         Destroy(gameObject);
+       }
+       else {
+         Debug.Log("enemy slapped by not me");
+       }
+
+     }
+
 }
