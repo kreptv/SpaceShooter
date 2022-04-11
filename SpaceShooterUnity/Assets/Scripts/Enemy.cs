@@ -3,7 +3,7 @@
  * Date Created: March 16, 2022
  *
  * Last Edited by: Haley Kelly
- * Last Edited: April 6, 2022
+ * Last Edited: April 11, 2022
  *
  * Description: Enemy controler
 ****/
@@ -74,7 +74,8 @@ public class Enemy : MonoBehaviour
 
        if(otherGo.tag == "Projectile Hero"){
          Debug.Log("yeeeet gottem");
-         Destroy(otherGo);
+         // Destroy(otherGo);
+         otherGo.SetActive(false);
          GameManager.GM.UpdateScore(score);
          Destroy(gameObject);
        }

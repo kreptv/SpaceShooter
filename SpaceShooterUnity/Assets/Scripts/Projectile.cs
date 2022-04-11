@@ -3,7 +3,7 @@
  * Last Edited: April 6, 2022
  *
  * Last Edited by: Haley Kelly
- * Last Edited: April 6, 2022
+ * Last Edited: April 11, 2022
  *
  * Description: projectile
 ****/
@@ -35,7 +35,9 @@ public class Projectile : MonoBehaviour
     {
 
       if (bndCheck.offUp){
-        Destroy(gameObject);
+      //  Destroy(gameObject);
+      gameObject.SetActive(false);
+      bndCheck.offUp = false;
       }
 
     }
